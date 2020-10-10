@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.alexander.digiotest.R
-import com.alexander.digiotest.databinding.BannerItemBinding
+import com.alexander.digiotest.databinding.SpotlightItemBinding
 import com.alexander.digiotest.model.Spotlight
 
 class SpotlightAdapter : RecyclerView.Adapter<SpotlightViewHolder>() {
@@ -13,7 +13,7 @@ class SpotlightAdapter : RecyclerView.Adapter<SpotlightViewHolder>() {
     var spotlights = listOf<Spotlight>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        DataBindingUtil.inflate<BannerItemBinding>(
+        DataBindingUtil.inflate<SpotlightItemBinding>(
             LayoutInflater.from(parent.context),
             R.layout.spotlight_item,
             parent,

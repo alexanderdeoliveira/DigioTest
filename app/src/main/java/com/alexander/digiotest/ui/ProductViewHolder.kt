@@ -5,8 +5,9 @@ import com.alexander.digiotest.databinding.ProductItemBinding
 import com.alexander.digiotest.model.Product
 
 class ProductViewHolder (private val binding: ProductItemBinding) : RecyclerView.ViewHolder(binding.root) {
-    fun bind(item: Product) {
+    fun bind(item: Product?) {
         binding.apply {
+            product = item
             executePendingBindings()
         }
     }
