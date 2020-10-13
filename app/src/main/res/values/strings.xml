@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">DigioTest</string>
     <string name="products_title">Produtos</string>
+    <string name="welcome_user">Olá, Maria</string>
 
 </resources>
