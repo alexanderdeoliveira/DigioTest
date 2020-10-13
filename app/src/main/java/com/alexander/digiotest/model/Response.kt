@@ -7,7 +7,8 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Response(
     @SerializedName("spotlight")
-    val spotlights: List<Spotlight>,
-    val products: List<Product>,
-    val banner: Banner
+    val spotlights: List<Spotlight>?,
+    val products: List<Product>?,
+    @SerializedName("cash")
+    val banner: Banner?
 ) : Parcelable

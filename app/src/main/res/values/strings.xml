@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DigioTest</string>
+    <string name="products_title">Produtos</string>
+
 </resources>

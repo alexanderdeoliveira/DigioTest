@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:bind="http://schemas.android.com/tools">
 
     <data>
@@ -9,33 +8,38 @@
             name="spotlight"
             type="com.alexander.digiotest.model.Spotlight" />
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView_item_house_logo"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
-            android:scaleType="fitCenter"
-            android:layout_marginTop="16dp"
-            bind:loadUrl="@{spotlight.bannerURL}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+    <com.qhutch.elevationimageview.ElevationImageView
+        android:id="@+id/imageview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:isTranslucent="true"
+        android:elevation="6dp"
+        bind:loadUrl="@{spotlight.bannerURL}" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:layout_marginBottom="16dp"
-            android:text="@{spotlight.name}"
-            app:layout_constraintTop_toBottomOf="@id/imageView_item_house_logo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_margin="5dp"-->
+<!--        app:cardCornerRadius="24dp"-->
+<!--        app:elevation="10dp">-->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/imageView_item_spotlight"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            bind:loadUrl="@{spotlight.bannerURL}"/>-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/imageView_item_spotlight"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:background="@drawable/round_banner"-->
+<!--        android:elevation="2dp"-->
+<!--        bind:loadUrl="@{spotlight.bannerURL}"/>-->
 
 </layout>

@@ -13,7 +13,6 @@ class MainActivity : BaseActivity() {
     private val binding: ActivityMainBinding by binding(R.layout.activity_main)
     private val viewModel: MainViewModel by viewModel { parametersOf() }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,5 +21,7 @@ class MainActivity : BaseActivity() {
             lifecycleOwner = this@MainActivity
             viewModel = this@MainActivity.viewModel
         }
+
+        viewModel.getMainData()
     }
 }
